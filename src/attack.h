@@ -23,6 +23,8 @@
  ==================================
 \**********************************/
 
-U64 mask_pawn_attacks(int square, int side);
+U64 mask_pawn_attacks(int side, int square);
+
+void init_leapers_attacks();
 
 #endif

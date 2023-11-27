@@ -11,6 +11,7 @@
 \**********************************/
 
 #include "attack.h"
+#include "bitmanipulation.h"
 
 /**********************************\
  ==================================
@@ -23,9 +24,8 @@
 // Main function
 int main()
 {
-    U64 bitboard = 0ULL;
-
-    mask_pawn_attacks(e4, white);  
+    // init leaper attacks
+    init_leapers_attacks();
 
     return 0;
 }
