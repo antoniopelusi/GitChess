@@ -14,6 +14,7 @@
 #define BITMANIPULATION_H
 
 #include "utils.h"
+#include <stdio.h>
 
 /**********************************\
  ==================================
