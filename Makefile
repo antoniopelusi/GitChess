@@ -1,6 +1,6 @@
 all:
-	gcc -Ofast src/main.c src/bitmanipulation.c -o bin/GitChess
-	x86_64-w64-mingw32-gcc -Ofast src/main.c src/bitmanipulation.c -o bin/GitChess.exe
+	gcc -Ofast src/** -o bin/GitChess
+	x86_64-w64-mingw32-gcc -Ofast src/** -o bin/GitChess.exe
 
 debug:
 	gcc src/** -o bin/GitChessDebug
