@@ -175,7 +175,6 @@ U64 mask_king_attacks(int square)
     if ((bitboard << 9) & not_a_file) attacks |= (bitboard << 9);
     if ((bitboard << 7) & not_h_file) attacks |= (bitboard << 7);
     if ((bitboard << 1) & not_a_file) attacks |= (bitboard << 1);
-    
 
 	return attacks;
 }

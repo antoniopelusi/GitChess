@@ -13,7 +13,6 @@
 #ifndef ATTACK_H
 #define ATTACK_H
 
-#include "utils.h"
 #include "bitmanipulation.h"
 
 /**********************************\

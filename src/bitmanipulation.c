@@ -35,10 +35,9 @@ void print_bitboard(U64 bitboard)
                   // convert file and rank into square index
                   int square = rank * 8 + file;
 
-                  // print board files
+                  // print board ranks
                   if(!file)
                   {
-
                         printf(" %d  ", (8 - rank));
                   }
 
