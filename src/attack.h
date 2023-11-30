@@ -23,14 +23,29 @@
  ==================================
 \**********************************/
 
-// generate pawn attacks
+// mask pawn attacks
 U64 mask_pawn_attacks(int side, int square);
 
-// generate knight attacks
+// mask knight attacks
 U64 mask_knight_attacks(int square);
 
-// generate king attacks
+// mask king attacks
 U64 mask_king_attacks(int square);
+
+// mask bishop attacks
+U64 mask_bishop_attacks(int square);
+
+// mask rook attacks
+U64 mask_rook_attacks(int square);
+
+// mask rook attacks on the fly
+U64 mask_bishop_attacks_block(int square, U64 block);
+
+// mask rook attacks on the fly
+U64 mask_rook_attacks_block(int square, U64 block);
+
+// mask queen attacks
+U64 mask_queen_attacks(int square);
 
 // init leaper pieces attack
 void init_leapers_attacks();
