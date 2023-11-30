@@ -33,6 +33,9 @@
 // macro: pop square bit from bitboard
 #define pop_bit(bitboard, square) (get_bit(bitboard, square) ? bitboard ^= (1ULL << square) : 0)
 
+// count bits within a bitboard
+static inline int count_bits(U64 bitboard);
+
 // print the bitboard
 void print_bitboard(U64 bitboard);
 

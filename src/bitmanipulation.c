@@ -20,6 +20,26 @@
  ==================================
 \**********************************/
 
+// count bits within a bitboard
+static inline int count_bits(U64 bitboard)
+{
+      // bit counter
+      int count = 0;
+
+      // consecutively reset least significant 1st bit
+      while(bitboard)
+      {
+            // increment bit counter
+            count++;
+
+            // reset least significant 1st bit
+            bitboard &= bitboard - 1;
+      }
+
+      // return bit count
+      return count;
+}
+
 // print the bitboard
 void print_bitboard(U64 bitboard)
 {
@@ -53,5 +73,7 @@ void print_bitboard(U64 bitboard)
       printf("\n     a b c d e f g h\n");
 
       // print bitboard as unsigned decimal number
-      printf("\n     Bitboard: %llud\n\n", bitboard);
+      printf("\n     Bitboard decimal value: %llu\n", bitboard);
+      printf("\n     Bitboard bit count: %d\n\n", count_bits(bitboard));
+
 }
