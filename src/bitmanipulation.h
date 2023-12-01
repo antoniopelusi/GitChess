@@ -36,6 +36,9 @@
 // count bits within a bitboard
 static inline int count_bits(U64 bitboard);
 
+// get least significant 1st bit (ls1b) index
+static inline int get_ls1b_index(U64 bitboard);
+
 // print the bitboard
 void print_bitboard(U64 bitboard);
 

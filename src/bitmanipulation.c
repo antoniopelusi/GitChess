@@ -40,6 +40,23 @@ static inline int count_bits(U64 bitboard)
       return count;
 }
 
+// get least significant 1st bit (ls1b) index
+static inline int get_ls1b_index(U64 bitboard)
+{
+      // if not empty
+      if(bitboard)
+      {
+            // count trailing bits before ls1b
+            return count_bits((bitboard & -bitboard) - 1); 
+      }
+
+      // if empty
+      else
+      {
+            return -1;
+      }
+}
+
 // print the bitboard
 void print_bitboard(U64 bitboard)
 {
@@ -73,7 +90,11 @@ void print_bitboard(U64 bitboard)
       printf("\n     a b c d e f g h\n");
 
       // print bitboard as unsigned decimal number
-      printf("\n     Bitboard decimal value: %llu\n", bitboard);
-      printf("\n     Bitboard bit count: %d\n\n", count_bits(bitboard));
+      printf("\n- decimal value: %llu\n", bitboard);
 
+      // print bit count
+      printf("\n- bit count: %d\n", count_bits(bitboard));
+
+      // print 
+      printf("\n- ls1b: %s\n\n", square_to_coordinates[get_ls1b_index(bitboard)]);
 }
