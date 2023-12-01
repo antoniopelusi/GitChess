@@ -14,7 +14,6 @@
 #define BITMANIPULATION_H
 
 #include "utils.h"
-#include <stdio.h>
 
 /**********************************\
  ==================================
@@ -38,8 +37,5 @@ int count_bits(U64 bitboard);
 
 // get least significant 1st bit (ls1b) index
 int get_ls1b_index(U64 bitboard);
-
-// print the bitboard
-void print_bitboard(U64 bitboard);
 
 #endif
