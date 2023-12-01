@@ -9,8 +9,9 @@
 
  ==================================
 \**********************************/
-
+#include "io.h"
 #include "attack.h"
+#include "magics.h"
 
 /**********************************\
  ==================================
@@ -20,11 +21,21 @@
  ==================================
 \**********************************/
 
+// init all variables
+void init_all()
+{
+    // init leaper pieces attacks
+    init_leapers_attacks();
+    
+    // init magic numbers
+    //init_magic_numbers();
+}
+
 // Main function
 int main()
 {
-    // init leaper attacks
-    init_leapers_attacks();
+    // init all
+    init_all();
 
     return 0;
 }
