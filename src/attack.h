@@ -44,10 +44,10 @@ U64 mask_bishop_attacks_block(int square, U64 block);
 // mask rook attacks on the fly
 U64 mask_rook_attacks_block(int square, U64 block);
 
-// mask queen attacks
-U64 mask_queen_attacks(int square);
-
 // init leaper pieces attack
 void init_leapers_attacks();
+
+// set occupancies
+U64 set_occupancy(int index, int bits_in_mask, U64 attack_mask);
 
 #endif

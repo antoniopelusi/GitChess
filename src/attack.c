@@ -316,12 +316,6 @@ U64 mask_rook_attacks_block(int square, U64 block)
 	return attacks;
 }
 
-// mask queen attacks
-U64 mask_queen_attacks(int square)
-{
-
-}
-
 // init leaper pieces attack
 void init_leapers_attacks()
 {
@@ -338,4 +332,31 @@ void init_leapers_attacks()
 		// init king attacks
         king_attacks[square] = mask_king_attacks(square);
 	}
+}
+
+// set occupancies
+U64 set_occupancy(int index, int bits_in_mask, U64 attack_mask)
+{
+	// occupancy map
+	U64 occupancy = 0ULL;
+
+	// loop over the range of bits within attack mask
+	for(int count = 0; count < bits_in_mask; count++)
+	{
+		// get ls1b index of attack mask
+		int square = get_ls1b_index(attack_mask);
+
+		// pop ls1b in attack mask
+		pop_bit(attack_mask, square);
+
+		// check if occupancy is on board
+		if(index & (1 << count))
+		{
+			// populate occupancy map
+			occupancy |= (1ULL << square);
+		}
+	}
+
+	// return occupancy map
+	return occupancy;
 }

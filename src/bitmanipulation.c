@@ -21,7 +21,7 @@
 \**********************************/
 
 // count bits within a bitboard
-static inline int count_bits(U64 bitboard)
+int count_bits(U64 bitboard)
 {
       // bit counter
       int count = 0;
@@ -41,7 +41,7 @@ static inline int count_bits(U64 bitboard)
 }
 
 // get least significant 1st bit (ls1b) index
-static inline int get_ls1b_index(U64 bitboard)
+int get_ls1b_index(U64 bitboard)
 {
       // if not empty
       if(bitboard)
