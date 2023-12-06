@@ -37,5 +37,7 @@ int main()
     // init all
     init_all();
 
+    print_bitboard(mask_bishop_attacks(e4));
+
     return 0;
 }
