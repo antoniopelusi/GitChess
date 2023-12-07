@@ -13,10 +13,9 @@
 #ifndef MAGIC_H
 #define MAGIC_H
 
+#include <string.h>
 #include "attack.h"
 #include "drng.h"
-#include <string.h>
-#include <stdio.h>
 
 /**********************************\
  ==================================

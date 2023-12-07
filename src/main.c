@@ -10,7 +10,6 @@
  ==================================
 \**********************************/
 #include "io.h"
-#include "attack.h"
 #include "magics.h"
 
 /**********************************\
@@ -28,7 +27,7 @@ void init_all()
     init_leapers_attacks();
     
     // init magic numbers
-    //init_magic_numbers();
+    init_magic_numbers();
 }
 
 // Main function
@@ -36,8 +35,6 @@ int main()
 {
     // init all
     init_all();
-
-    print_bitboard(mask_bishop_attacks(e4));
 
     return 0;
 }
