@@ -13,9 +13,7 @@
 #ifndef MAGIC_H
 #define MAGIC_H
 
-#include <string.h>
-#include "attack.h"
-#include "drng.h"
+#include "utils.h"
 
 /**********************************\
  ==================================
@@ -25,16 +23,19 @@
  ==================================
 \**********************************/
 
-// rook magic numbers
-extern U64 rook_magic_numbers[64];
-
-// bishop magic numbers
-extern U64 bishop_magic_numbers[64];
-
 // find appropriate magic number
 U64 find_magic_number(int square, int relevant_bits, int bishop);
 
 // init magic numbers
 void init_magic_numbers();
+
+// init slider piece's attack tables
+void init_sliders_attacks(int bishop);
+
+// get bishop attacks
+U64 get_bishop_attacks(int square, U64 occupancy);
+
+// get bishop attacks
+U64 get_rook_attacks(int square, U64 occupancy);
 
 #endif

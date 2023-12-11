@@ -13,8 +13,7 @@
 #ifndef IO_H
 #define IO_H
 
-#include "bitmanipulation.h"
-#include <stdio.h>
+#include "utils.h"
 
 /**********************************\
  ==================================

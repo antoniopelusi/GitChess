@@ -9,8 +9,12 @@
 
  ==================================
 \**********************************/
-#include "io.h"
+
+#include "attack.h"
 #include "magics.h"
+
+#include "io.h"
+#include "bitmanipulation.h"
 
 /**********************************\
  ==================================
@@ -25,9 +29,13 @@ void init_all()
 {
     // init leaper pieces attacks
     init_leapers_attacks();
+
+    // init slider pieces attacks
+    init_sliders_attacks(bishop);
+    init_sliders_attacks(rook);
     
-    // init magic numbers
-    init_magic_numbers();
+    // init magic numbers pre-calculated and saved in magics.c
+    /* init_magic_numbers(); */
 }
 
 // Main function
