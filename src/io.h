@@ -24,6 +24,6 @@
 \**********************************/
 
 // print the bitboard
-void print_bitboard(U64 bitboard);
+void print_bitboard(U64 bitboard, int pos);
 
 #endif
