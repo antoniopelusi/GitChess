@@ -21,7 +21,7 @@
  ==================================
 \**********************************/
 
-void print_bitboard(U64 bitboard, int pos)
+void print_bitboard(U64 bitboard)
 {
       // print init board
       printf("   ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓\n");
@@ -41,16 +41,8 @@ void print_bitboard(U64 bitboard, int pos)
                         printf(" %d ┃", (8 - rank));
                   }
 
-                  if(square == pos)
-                  {
-                        // print piece
-                        printf(" ● ┃");
-                  }
-                  else
-                  {
-                        // print targets
-                        printf(" %s ┃", get_bit(bitboard, square) ? "🞪" : " ");
-                  }
+                  // print targets
+                  printf(" %s ┃", get_bit(bitboard, square) ? "🞪" : " ");
             }
 
             // print new line every rank

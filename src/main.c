@@ -45,7 +45,7 @@ int main()
     init_all();
 
     U64 occupancy = 0ULL;    
-    print_bitboard(get_bishop_attacks(d4, occupancy), d4);
+    print_bitboard(get_bishop_attacks(d4, occupancy));
 
     return 0;
 }
