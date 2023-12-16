@@ -24,13 +24,13 @@
 \**********************************/
 
 // macro: set square bit in bitboard
-#define set_bit(bitboard, square) (bitboard |= (1ULL << square))
+#define set_bit(bitboard, square) ((bitboard) |= (1ULL << (square)))
 
 // macro: get square bit from bitboard
-#define get_bit(bitboard, square) (bitboard & (1ULL << square))
+#define get_bit(bitboard, square) ((bitboard) & (1ULL << (square)))
 
 // macro: pop square bit from bitboard
-#define pop_bit(bitboard, square) (get_bit(bitboard, square) ? bitboard ^= (1ULL << square) : 0)
+#define pop_bit(bitboard, square) ((bitboard) &= ~(1ULL << (square)))
 
 // count bits within a bitboard
 int count_bits(U64 bitboard);
