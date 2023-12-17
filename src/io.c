@@ -24,7 +24,7 @@
 void print_bitboard(U64 bitboard)
 {
       // print init board
-      printf("   ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓\n");
+      printf("\n   ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓\n");
 
       // loop over board ranks
       for(int rank = 0; rank < 8; rank++)
