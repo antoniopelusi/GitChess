@@ -115,7 +115,7 @@ void init_magic_numbers()
 void init_sliders_attacks(int bishop)
 {
     // loop over 64 board squares
-    for (int square = 0; square < 64; square++)
+    for(int square = 0; square < 64; square++)
     {
         // init bishop & rook masks
         bishop_masks[square] = mask_bishop_attacks(square);
@@ -131,10 +131,10 @@ void init_sliders_attacks(int bishop)
         int occupancy_indicies = (1 << relevant_bits_count);
         
         // loop over occupancy indicies
-        for (int index = 0; index < occupancy_indicies; index++)
+        for(int index = 0; index < occupancy_indicies; index++)
         {
             // bishop
-            if (bishop)
+            if(bishop)
             {
                 // init current occupancy variation
                 U64 occupancy = set_occupancy(index, relevant_bits_count, attack_mask);
