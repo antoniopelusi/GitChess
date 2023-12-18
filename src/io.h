@@ -23,7 +23,10 @@
  ==================================
 \**********************************/
 
-// print the bitboard
+// print bitboard
 void print_bitboard(U64 bitboard);
+
+// print bitboard
+void print_board();
 
 #endif
